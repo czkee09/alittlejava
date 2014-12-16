@@ -5,12 +5,12 @@ package chapter6;
  */
 public class Bot extends PieD {
     @Override
-    PieD rem(RemV remFn, Object o) {
-        return remFn.forBot(o);
+    PieD rem(RemV remFn) {
+        return remFn.forBot();
     }
 
     @Override
-    PieD subst(SubstV substFn, Object n, Object o) {
-        return substFn.forBot(o);
+    PieD subst(SubstV substFn) {
+        return substFn.forBot();
     }
 }
