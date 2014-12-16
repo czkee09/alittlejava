@@ -15,12 +15,12 @@ public class Top extends PieD {
     //---------------------------------
 
     @Override
-    PieD rem(Object o) {
+    PieD rem(RemV remFn, Object o) {
         return remFn.forTop(t, r, o);
     }
 
     @Override
-    PieD subst(Object n, Object o) {
+    PieD subst(SubstV substFn, Object n, Object o) {
         return substFn.forTop(t, r, n, o);
     }
 }

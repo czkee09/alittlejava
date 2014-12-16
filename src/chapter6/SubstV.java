@@ -10,9 +10,9 @@ public class SubstV {
 
     PieD forTop(Object t, PieD r, Object n, Object o) {
         if (t.equals(o)) {
-            return new Top(n, r.subst(n, o));
+            return new Top(n, r.subst(this, n, o));
         } else {
-            return new Top(t, r.subst(n, o));
+            return new Top(t, r.subst(this, n, o));
         }
     }
 }
