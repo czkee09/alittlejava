@@ -15,12 +15,8 @@ public class Top extends PieD {
     //---------------------------------
 
     @Override
-    PieD rem(RemV remFn) {
-        return remFn.forTop(t, r);
+    PieD accept(PieVisitorI ask) {
+        return ask.forTop(t, r);
     }
 
-    @Override
-    PieD subst(SubstV substFn) {
-        return substFn.forTop(t, r);
-    }
 }

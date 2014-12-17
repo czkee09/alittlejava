@@ -3,7 +3,7 @@ package chapter6;
 /**
  * Created by Administrator on 2014/12/16.
  */
-public class SubstV {
+public class SubstV implements PieVisitorI {
     Object n;
     Object o;
 
@@ -14,15 +14,15 @@ public class SubstV {
 
     //-------------------------------------------
 
-    PieD forBot() {
+    public PieD forBot() {
         return new Bot();
     }
 
-    PieD forTop(Object t, PieD r) {
+    public PieD forTop(Object t, PieD r) {
         if (t.equals(o)) {
-            return new Top(n, r.subst(this));
+            return new Top(n, r.accept(this));
         } else {
-            return new Top(t, r.subst(this));
+            return new Top(t, r.accept(this));
         }
     }
 }

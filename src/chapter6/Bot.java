@@ -5,12 +5,7 @@ package chapter6;
  */
 public class Bot extends PieD {
     @Override
-    PieD rem(RemV remFn) {
-        return remFn.forBot();
-    }
-
-    @Override
-    PieD subst(SubstV substFn) {
-        return substFn.forBot();
+    PieD accept(PieVisitorI ask) {
+        return ask.forBot();
     }
 }
